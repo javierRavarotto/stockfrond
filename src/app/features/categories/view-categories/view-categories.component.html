@@ -1,0 +1,27 @@
+@for (categorie of categories; track categorie.id) {
+    <div class="row justify-content-center mt-1">
+        <div class="col-8">
+    <table class="table ">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Codigo</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{categorie.id}}</th>
+            <th scope="row">{{categorie.name}}</th>
+            <th scope="row">{{categorie.color.name}}</th>
+            <th scope="row"><button  class="m-1 botonCrear" name="edit" [routerLink]="['../editeCategorie/',categorie.id]">Editar</button></th>
+            <th scope="row"><a href="">borra</a></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>    
+  </div>
+
+}    
