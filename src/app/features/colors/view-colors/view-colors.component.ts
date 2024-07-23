@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ColorsService } from '../../../core/services/colors/colors.service';
 import { Colors } from '../../../core/interface/Colors';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-view-colors',
@@ -16,6 +16,7 @@ export class ViewColorsComponent implements OnInit {
 
 
 colors:any ={}
+private router = inject(Router);
 
   ngOnInit(): void {
     this.colorsService.list().subscribe((colors:any )=>{
@@ -23,5 +24,15 @@ colors:any ={}
     })
 
   }
+  public delete(color:any){
+    console.log(color.id)
+   this.colorsService.delete(color.id).subscribe(data =>{
 
+   }, err =>{
+      console.log(err)
+      alert("este color esta en uso en una categoria")
+   })
+   
+   
+  }
 }

@@ -1,0 +1,15 @@
+
+.card-local{
+    background-color: #1a5e91;
+    height: 300px;
+    }
+.image{
+    height: 150px;
+    margin-top: 10px;
+}
+label{
+    margin:25px;
+}
+img{
+    border-radius: 50%;
+}

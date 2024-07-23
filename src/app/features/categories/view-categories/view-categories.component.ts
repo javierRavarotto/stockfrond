@@ -22,5 +22,13 @@ categories:any ={}
     })
 
   }
+  public delete(categorie:any){
+  
+   this.categoriesService.delete(categorie.id).subscribe(data =>{
 
+   }, err =>{
+      console.log(err)
+      alert("este categoria tiene un color asosciado borrarlo antes")
+   })
+  }
 }

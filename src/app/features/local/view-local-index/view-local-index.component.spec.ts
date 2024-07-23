@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditColorsComponent } from './edit-colors.component';
+import { ViewLocalIndexComponent } from './view-local-index.component';
 
-describe('EditColorsComponent', () => {
-  let component: EditColorsComponent;
-  let fixture: ComponentFixture<EditColorsComponent>;
+describe('ViewLocalIndexComponent', () => {
+  let component: ViewLocalIndexComponent;
+  let fixture: ComponentFixture<ViewLocalIndexComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EditColorsComponent]
+      imports: [ViewLocalIndexComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(EditColorsComponent);
+    fixture = TestBed.createComponent(ViewLocalIndexComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

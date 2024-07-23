@@ -1,1 +1,28 @@
-<p>view-local works!</p>
+@for (local of locals; track local.id) {
+    <div class="row justify-content-center mt-1">
+        <div class="col-8">
+    <table class=" tables mt-2" id="secundary">
+        <thead>
+          <tr class="secundary">
+            <th scope="col" class="col-2 padding">id</th>
+            <th scope="col" class="col-2 padding">Nombre</th>
+            <th scope="col" class="col-2 padding">Stock</th>
+            <th scope="col" class="col-2 padding">Editar</th>
+            <th scope="col" class="col-2 padding">Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{local.id}}</th>
+            <th scope="row">{{local.name}}</th>
+ 
+            <th scope="row"><button  class="m-1 botonCrear" name="edit" [routerLink]="['../editeLocal/',local.id]">Stock</button></th>
+            <th scope="row"><button  class="m-1 botonCrear" name="edit" [routerLink]="['../editeLocales/',local.id]">Editar</button></th>
+            <th scope="row"><button (click)="delete(local)"> Borrar</button></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>    
+  </div>
+
+}     

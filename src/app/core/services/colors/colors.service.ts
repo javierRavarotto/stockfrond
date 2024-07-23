@@ -22,7 +22,9 @@ export class ColorsService {
     console.log(color)
     return this.http.post(this.urlApi, color)
   }
-  update(id: number ,color:any){
+  update(id: any ,color:any){
+    console.log(color)
+    console.log(`${this.urlApi}/${id}`)
     return this.http.put(`${this.urlApi}/${id}`, color)
   }
   delete(id: number){

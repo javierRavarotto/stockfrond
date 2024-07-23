@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditLocalComponent } from './edit-local.component';
+import { AddClothesModalComponent } from './add-clothes-modal.component';
 
-describe('EditLocalComponent', () => {
-  let component: EditLocalComponent;
-  let fixture: ComponentFixture<EditLocalComponent>;
+describe('AddClothesModalComponent', () => {
+  let component: AddClothesModalComponent;
+  let fixture: ComponentFixture<AddClothesModalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EditLocalComponent]
+      imports: [AddClothesModalComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(EditLocalComponent);
+    fixture = TestBed.createComponent(AddClothesModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

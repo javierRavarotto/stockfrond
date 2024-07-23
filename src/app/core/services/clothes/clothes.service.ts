@@ -12,7 +12,7 @@ export class ClothesService {
  //injectables
  private http = inject(HttpClient)
  private httpHeaders = new HttpHeaders({'Content-type':'application/json'})
- private urlApi:string= Url.url + "categories"
+ private urlApi:string= Url.url + "clothes"
  list(){
    return this.http.get(this.urlApi)
  }
