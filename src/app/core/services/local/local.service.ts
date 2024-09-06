@@ -28,5 +28,9 @@ export class LocalService {
  delete(id: number){
    return this.http.delete(`${this.urlApi}/${id}`)
  }
+ 
+ addStock(id: number){
+  return this.http.put(`${this.urlApi}/addStock${id}`, id)
+}
 
 }

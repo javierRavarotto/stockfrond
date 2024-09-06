@@ -12,23 +12,23 @@ import { RouterLink } from '@angular/router';
 export class ViewLocalComponent {
 
   private localService = inject(LocalService)
-locals:any={}
+locals:any=[]
   ngOnInit(): void {
+    console.log("sdsd")
     this.localService.list().subscribe((locals:any )=>{
+      console.log("esd")
       this.locals=locals
-    })
+      console.log(locals)
+    }, err =>{
+      console.log(err)
+      alert("este categoria tiene un color asosciado borrarlo antes")
+   })
 }  
-
 public delete(local:any){
   
   this.localService.delete(local.id).subscribe(data =>{
-
   }, err =>{
-     console.log(err)
      alert("este categoria tiene un color asosciado borrarlo antes")
   })
-  
-  
  }
-
 }

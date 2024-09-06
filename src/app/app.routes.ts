@@ -8,9 +8,11 @@ import { CreateLocalComponent } from './features/local/create-local/create-local
 import { ViewCategoriesComponent } from './features/categories/view-categories/view-categories.component';
 import { ViewLocalComponent } from './features/local/view-local/view-local.component';
 import { ViewLocalIndexComponent } from './features/local/view-local-index/view-local-index.component';
+import { ViewStockComponent } from './features/local/stock/view-stock/view-stock.component';
+import { AddClothesModalComponent } from './features/local/stock/add-clothes-modal/add-clothes-modal.component';
  
 export const routes: Routes = [
-    // ruras de categorias
+    // rutas de categorias
     { path: 'createCategories', component: CreateCategoriesComponent}, 
     { path: 'editeCategorie/:id', component: CreateCategoriesComponent},
     { path: 'viewCategories', component: ViewCategoriesComponent},
@@ -27,6 +29,8 @@ export const routes: Routes = [
     { path: 'createLocales', component: CreateLocalComponent},  
     { path: 'viewLocales', component: ViewLocalComponent},
     { path: 'editelocales/:id', component: CreateLocalComponent},
-
     { path: '', component: ViewLocalIndexComponent},
+    { path: 'viewStockLocal/:id', component: ViewStockComponent},
+    
+    { path: 'addClothesLocal/:id', component: AddClothesModalComponent},
 ];

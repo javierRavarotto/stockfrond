@@ -13,8 +13,6 @@ export class ViewClothesComponent implements OnInit {
 
   
   private clothesService = inject(ClothesService)
-
-
 clothes:any ={}
 
   ngOnInit(): void {

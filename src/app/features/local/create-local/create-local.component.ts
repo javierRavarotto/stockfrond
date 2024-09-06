@@ -1,17 +1,17 @@
 import { Component, inject } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { LocalService } from '../../../core/services/local/local.service';
 
 @Component({
   selector: 'app-create-local',
   standalone: true,
-  imports: [RouterModule,ReactiveFormsModule], 
+  imports: [RouterModule,ReactiveFormsModule,FormsModule], 
   templateUrl: './create-local.component.html',
   styleUrl: './create-local.component.css'
 })
 export class CreateLocalComponent {
-  titulo= "Crear colores"
+  titulo= "Crear local"
 
 
   //injectables
@@ -21,6 +21,7 @@ export class CreateLocalComponent {
   private localService = inject(LocalService)
   flag=true
   locals:any ={}
+  local:any={}
   form =this.fb.group({
     name: ['', Validators.required],
   
@@ -32,11 +33,8 @@ export class CreateLocalComponent {
         this.locals=locals
     })
     this.seeFlag()
-
+    this.get()
   }
- 
-
-  
   public create():void{
   const  local = this.form.value
   this.localService.create(local).subscribe(()=>{
@@ -56,9 +54,19 @@ export class CreateLocalComponent {
     this.activateRouter.params.subscribe(params =>{    
       if (params["id"]) {
       this.flag=false 
-      }else{
+      }else{ 
         this.flag=true
       }
     })
   }
+
+  public get(){
+    this.activateRouter.params.subscribe(params =>{
+      const id = params["id"]
+      this.localService.get(id).subscribe(local =>{
+        this.local=local;
+      }) 
+    })
+  }
+
 }

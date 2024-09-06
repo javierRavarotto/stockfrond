@@ -5,7 +5,7 @@
       <form [formGroup]="form" class="col-12 text-center" >
          <div class="m-2 col-10  ">
             <label class="col-3 col-sm-2 text-end m-2" for="name "> Nombre</label>
-            <input class="col-6 col-sm-2" type="text"  formControlName="name">
+            <input class="col-6 col-sm-2" type="text"  formControlName="name" [(ngModel)]="local.name">
          </div>
          <div>
             @if(flag){
@@ -13,8 +13,8 @@
             
             }@else{
                <button class="botonCrear" (click)="edit()">Editar</button>
-  
             }
+            
          </div>
       </form>
    </div>

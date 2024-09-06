@@ -10,8 +10,7 @@ import { LocalService } from '../../../core/services/local/local.service';
 })
 export class ViewLocalIndexComponent {
 
-  
-  private localService = inject(LocalService)
+private localService = inject(LocalService)
 locals:any={} 
   ngOnInit(): void {
     this.localService.list().subscribe((locals:any )=>{

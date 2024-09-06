@@ -69,8 +69,6 @@ export class CreateClothesComponent {
   }
   public seeFlag(){
     this.activateRouter.params.subscribe(params =>{
-      console.log(params["id"])
-      
       if (params["id"]) {
       
         this.flag=false 
