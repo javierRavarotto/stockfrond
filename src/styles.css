@@ -1,3 +1,66 @@
-body{
+@import 'bootstrap/dist/css/bootstrap.min.css';/* body{
     background-color: rgb(85, 81, 81);
+} */
+.color1 { 
+      background-color: #337eb4, #266ea2,#1a5e91,#0d4d7f,#003d6d,#E8D341}
+
+body{
+    background-color:#003d6d;
+}
+label{
+    color: white;
+}
+div{
+    color: white;
+}
+a{
+    color: white;
+}
+.padding{
+    padding-top: 25px;
+    }
+button{
+    background-color: #E8D341;
+    border-radius: 5px;
+    font-size: 17px;
+}
+li{
+    background-color: #266ea2;
+    color: white;
+}
+ul{
+    background-color: #266ea2;
+}
+input{
+        background: linear-gradient(#1a5e91, #003d6d);
+      border: none;
+      border-radius: 5px;
+      border-bottom: solid 2px white;
+      color: white;
+}
+select{
+    background: linear-gradient(#1a5e91, #003d6d);
+    border: none;
+    border-radius: 5px;
+    border-bottom: solid 2px white;
+    color: white;
+}
+
+option {
+  color: white;
+  background-color: #1a5e91;
+}
+input:focus{
+    background: linear-gradient(#337eb4, #1a5e91);
+}
+select:hover{
+    cursor: pointer;
+}
+.tables{
+    width: 100%;
+    background-color: #1a5e91;
+    text-align: center;
+    border-radius: 5px;
+    height: 150px;
+    justify-content: center;
 }

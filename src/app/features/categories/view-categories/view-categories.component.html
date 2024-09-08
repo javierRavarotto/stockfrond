@@ -1,1 +1,28 @@
-<p>view-categories works!</p>
+
+@for (categorie of categories; track categorie.id) {
+    <div class="row justify-content-center mt-1 " >
+        <div class="col-10  " >
+    <table class="tables mt-2  ">
+        <thead>
+          <tr>
+            <th scope="col" class="col-1 padding">id</th>
+            <th scope="col" class="col-2 padding">Nombre</th>
+            <th scope="col" class="col-2 padding">Codigo</th>
+            <th scope="col" class="col-2 padding">Editar</th>
+            <th scope="col" class="col-2 padding">Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{categorie.id}}</th>
+            <th scope="row">{{categorie.name}}</th>
+            <th scope="row">{{categorie.color.name}}</th>
+            <th scope="row"><button  class="m-1 botonCrear" name="edit" [routerLink]="['../editeCategorie/',categorie.id]">Editar</button></th>
+            <th scope="row"><button (click)="delete(categorie)"> Borrar</button></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>    
+  </div>
+
+}     
