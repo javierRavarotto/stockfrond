@@ -2,22 +2,32 @@
 <div class="row justify-content-center mt-5 text-end">
    <b class="card-header  col-12 mb-1 text-center">{{titulo}}</b>
    <div class="row justify-content-center">
-      <form [formGroup]="form" (ngSubmit)="create()"   class="col-12 text-center" >
+      
+
+      
+      <form [formGroup]="form"   class="col-12 text-center" >
          <div class="m-2 col-10  ">
             <label class="col-3 col-sm-2 text-end m-2" for="name "> Nombre</label>
-            <input class="col-6 col-sm-2" type="text"  formControlName="name">
+            <input class="col-12 col-sm-2" type="text"  formControlName="name" [(ngModel)]="category.name">
          </div>
          <div class="m-2 col-10  ">
-            <label class="col-3 col-sm-2 text-end m-2" for="id"> Codigo</label>
-           
-                <select name="id" id="cars" for="color" formControlName="id">
-                    @for (color of colors; track color.id) {
-                    <option value={{color.id}}>{{color.name}}</option>
+            <label class="col-12 col-sm-2 text-end m-2" for="id"> Codigo</label>
+         
+                <select name="id" id="cars" for="color" class="col-2" formControlName="id"  [(ngModel)]="color.id">
+                    @for (color of colors; track color.id)  {
+                    <option  value={{color.id}}> {{color.name}} </option >
                     }
-                </select>
+                </select>  
          </div>
          <div>
-            <button class="botonCrear">Crear</button>
+            @if(flag){
+               <button class="botonCrear col-1" (click)="create()">Crear</button>
+            
+            }@else{
+               <button class="botonCrear col-1" (click)="edit()">Editar</button>
+ 
+            }
+
          </div>
       </form>
    </div>

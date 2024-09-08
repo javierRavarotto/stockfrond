@@ -7,8 +7,7 @@
             <th scope="col"  class="col-1 padding">Codigo</th>
             <th scope="col" class="col-2 padding">Nombre</th>
             <th scope="col" class="col-2 padding">imagen</th>
-            <th scope="col" class="col-2 padding">Editar</th>
-            <th scope="col" class="col-2 padding">Borrar</th>
+            <th scope="col" class="col-2 padding">agregar</th>
           </tr>
         </thead>
         <tbody>
@@ -16,8 +15,7 @@
             <th scope="row">{{clothe.code}}</th>
             <th scope="row">{{clothe.name}}</th>
             <th scope="row">{{clothe.image}}</th>
-            <th scope="row"><button  class="m-1 botonCrear" name="edit" [routerLink]="['../editeClothes/',clothe.id]">Editar</button></th>
-            <th scope="row"><button (click)="delete(clothe)"> Borrar</button></th>
+            <th scope="row"><button class="botonCrear" (click)="addClothe(clothe.id)">agregar</button></th>
           </tr>
         </tbody>
       </table>

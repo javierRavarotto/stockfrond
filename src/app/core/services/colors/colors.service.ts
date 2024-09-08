@@ -19,10 +19,9 @@ export class ColorsService {
     return this.http.get(`${this.urlApi}/${id}`)
   }
   create(color:any){
-    console.log(color)
     return this.http.post(this.urlApi, color)
   }
-  update(id: number ,color:any){
+  update(id: any ,color:any){
     return this.http.put(`${this.urlApi}/${id}`, color)
   }
   delete(id: number){
