@@ -45,9 +45,12 @@ export class ViewStockComponent {
     })
   }
   save(idStock:number,){
-    this.inventoryService.save(idStock,this.form).subscribe((inventory:any)=>{
-
-    })
+    const  stockForm = this.form.value
+    console.log(this.form.value)
+    this.inventoryService.save(idStock,stockForm).subscribe((inventory:any)=>{
+    
+console.log("sale")
+     })
   }
 
 }

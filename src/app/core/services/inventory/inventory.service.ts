@@ -20,6 +20,7 @@ export class InventoryService{
   return this.http.put(`${this.urlApi}/${idLocal}/addClothe`,idClothe)
  }
 save(idStock:number, clotheStock:any){
+  console.log("entro")
   return this.http.put(`${this.urlApi}/${idStock}/addClothe`,clotheStock) 
 }
 
